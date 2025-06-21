@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMX Gamer - Portal</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>LMX Bootstrap Gamer</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lancamentos">Lançamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destaques">Destaques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="btn-checar-emails" class="btn btn-warning" type="button">Notificações</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast" id="mensagens-alerta">
+            <header class="toast-header">
+                <strong>Alerta Gamer</strong>
+            </header>
+            <div class="toast-body">
+                Você tem 3 cupons de desconto não utilizados!
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" class="btn btn-danger" type="button">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script>
+        const ativadorToast = document.getElementById('btn-checar-emails');
+        const mensagem = document.getElementById('mensagens-alerta')
+
+        if (ativadorToast) {
+            ativadorToast.addEventListener('click', function () {
+                const toast = new bootstrap.Toast(mensagem);
+                toast.show();
+            })
+        }
+    </script>
+
+    <!-- Carousel com tema gamer -->
+    <div class="container">
+        <div id="carousel-exemplo" class="carousel carousel-fade slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="3000" class="carousel-item active">
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2021/12/30/12/09/gaming-computer-6903836_1280.jpg" />
+                    <div class="carousel-caption">
+                        <h2>Setup Gamer Iluminado</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/10/01/16/53/game-controller-5619105_1280.jpg" />
+                    <div class="carousel-caption">
+                        <h2>Jogando em Alta Performance</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item">
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" />
+                    <div class="carousel-caption">
+                        <h2>Estilo e Praticidade</h2>
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards com tema gamer -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                <article class="card">
+                    <header class="card-header">
+                        PC Gamer Avançado
+                    </header>
+                    <img src="https://cdn.pixabay.com/photo/2019/04/15/11/42/fortnite-4129124_1280.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Desempenho Extremo</h4>
+                        <p class="card-text">
+                            Conheça a máquina perfeita para rodar os últimos lançamentos em 4K.
+                        </p>
+                        <a href="#" class="btn btn-primary">Detalhes</a>
+                    </div>
+                    <footer class="card-footer">
+                        Atualizado em <time datetime="">21/06/2025 às 16:20:10</time>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-dark">
+                    <img src="https://i.pinimg.com/736x/26/dc/bf/26dcbf9b5c2f5c2de0c449f77342a53d.jpg">
+                    <div class="card-img-overlay">
+                        <h4 class="card-title">Acessórios Gamer</h4>
+                        <h5 class="card-subtitle">Headsets, teclados e mais</h5>
+                        <p class="card-text">
+                            Tudo que você precisa para completar seu setup dos sonhos.
+                        </p>
+                        <a href="#" class="btn btn-primary">Ver catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        Oferta Relâmpago
+                    </div>
+                    <img src="https://i.pinimg.com/736x/78/5e/85/785e85e51b1cacbff7db9a4ef7f8ec9d.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Combo Gamer</h4>
+                        <h5 class="card-subtitle">Desconto limitado</h5>
+                        <p class="card-text">
+                            PC Gamer + Monitor 144Hz com R$ 800 de desconto. Aproveite!
+                        </p>
+                        <a href="#" class="btn btn-primary">Comprar agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
