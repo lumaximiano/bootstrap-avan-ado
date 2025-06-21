@@ -34,58 +34,33 @@
                         </li>
                     </ul>
                 </nav>
-                <button id="btn-checar-emails" class="btn btn-warning" type="button">Notificações</button>
             </div>
         </div>
     </header>
 
-    <div class="toast-container position-fixed bottom-0 end-0 p-3">
-        <div class="toast" id="mensagens-alerta">
-            <header class="toast-header">
-                <strong>Alerta Gamer</strong>
-            </header>
-            <div class="toast-body">
-                Você tem 3 cupons de desconto não utilizados!
-                <div class="mt-2 pt-2 border-top">
-                    <button data-bs-dismiss="toast" class="btn btn-danger" type="button">
-                        Fechar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="lib/bootstrap.bundle.min.js"></script>
-    <script>
-        const ativadorToast = document.getElementById('btn-checar-emails');
-        const mensagem = document.getElementById('mensagens-alerta')
-
-        if (ativadorToast) {
-            ativadorToast.addEventListener('click', function () {
-                const toast = new bootstrap.Toast(mensagem);
-                toast.show();
-            })
-        }
-    </script>
 
     <!-- Carousel com tema gamer -->
     <div class="container">
         <div id="carousel-exemplo" class="carousel carousel-fade slide mb-5" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div data-bs-interval="3000" class="carousel-item active">
-                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2021/12/30/12/09/gaming-computer-6903836_1280.jpg" />
+                    <img class="d-block w-100"
+                        src="https://cdn.pixabay.com/photo/2021/12/30/12/09/gaming-computer-6903836_1280.jpg" />
                     <div class="carousel-caption">
                         <h2>Setup Gamer Iluminado</h2>
                     </div>
                 </div>
                 <div data-bs-interval="3000" class="carousel-item">
-                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/10/01/16/53/game-controller-5619105_1280.jpg" />
+                    <img class="d-block w-100"
+                        src="https://cdn.pixabay.com/photo/2020/10/01/16/53/game-controller-5619105_1280.jpg" />
                     <div class="carousel-caption">
                         <h2>Jogando em Alta Performance</h2>
                     </div>
                 </div>
                 <div data-bs-interval="3000" class="carousel-item">
-                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" />
+                    <img class="d-block w-100"
+                        src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" />
                     <div class="carousel-caption">
                         <h2>Estilo e Praticidade</h2>
                     </div>
@@ -108,7 +83,7 @@
     <!-- Cards com tema gamer -->
     <div class="container mt-5">
         <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <article class="card">
                     <header class="card-header">
                         PC Gamer Avançado
@@ -126,7 +101,7 @@
                     </footer>
                 </article>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card text-bg-dark">
                     <img src="https://i.pinimg.com/736x/26/dc/bf/26dcbf9b5c2f5c2de0c449f77342a53d.jpg">
                     <div class="card-img-overlay">
@@ -139,7 +114,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-6 col-lg-4 mb-4">
                 <div class="card text-bg-dark">
                     <div class="card-header">
                         Oferta Relâmpago
